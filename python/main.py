@@ -12,8 +12,8 @@ load_dotenv()
 secret = os.environ.get('SECRET')
 sdkappid = int(os.environ.get('SDKAPPID'))
 rtsp_url = os.environ.get('RTSP_URL')
-room_id = os.environ.get('ROOM_ID')
-user_id = int(os.environ.get('USER_ID'))
+room_id = int(os.environ.get('ROOM_ID'))
+user_id = os.environ.get('USER_ID')
 
 
 sig = TLSSigAPIv2.TLSSigAPIv2(
