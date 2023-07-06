@@ -65,7 +65,7 @@ func main() {
 	}
 
 	// Alloc output format context
-	outputFormatContext, err := astiav.AllocOutputFormatContext(nil, "flv", output_url)
+	outputFormatContext, err := astiav.AllocOutputFormatContext(nil, "flv", "aa.flv")
 	if err != nil {
 		log.Fatal(fmt.Errorf("main: allocating output format context failed: %w", err))
 	}
@@ -85,6 +85,14 @@ func main() {
 
 		// Add input stream
 		inputStreams[istream.Index()] = istream
+
+		if istream.CodecParameters().MediaType() == astiav.MediaTypeAudio {
+			fmt.Println("index ", istream.Index(), " audio")
+		}
+
+		if istream.CodecParameters().MediaType() == astiav.MediaTypeVideo {
+			fmt.Println("index ", istream.Index(), " video")
+		}
 
 		// Add stream to output format context
 		ostream := outputFormatContext.NewStream(nil)
@@ -122,7 +130,7 @@ func main() {
 
 		// wait fot keyframe to start
 		if !got_first_key_frame {
-			if pkt.Flags().Has(astiav.PacketFlagKey) == false {
+			if !pkt.Flags().Has(astiav.PacketFlagKey) || pkt.StreamIndex() == 0 {
 				pkt.Unref()
 				continue
 			}
@@ -131,7 +139,7 @@ func main() {
 
 		fmt.Println("pkt: ", pkt.StreamIndex(), pkt.Flags().Has(astiav.PacketFlagKey))
 
-		// Get input stream
+		//Get input stream
 		inputStream, ok := inputStreams[pkt.StreamIndex()]
 		if !ok {
 			pkt.Unref()
