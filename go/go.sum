@@ -1,3 +1,5 @@
+github.com/3d0c/gmf v0.0.0-20220906170454-be727bc5b56c h1:8i+Ctl/XBV/MINPveOAMGjJO2XiObXmYe/j4vAEL+3s=
+github.com/3d0c/gmf v0.0.0-20220906170454-be727bc5b56c/go.mod h1:PqcBsVCdnbbM6CMlSSPQMtmUyMfxF+Zjddh957qOzMw=
 github.com/asticode/go-astiav v0.10.0 h1:f/YHASav/+iHdI6QQs6bS3t73WlnWZ6oB5J9VOAA+i0=
 github.com/asticode/go-astiav v0.10.0/go.mod h1:phvUnSSlV91S/PELeLkDisYiRLOssxWOsj4oDrqM/54=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -6,6 +8,7 @@ github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwA
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/tencentyun/tls-sig-api-v2-golang v1.3.0 h1:mW4onVqOP6MqkJtTay74Tch6NvjwQRXeCuhUC/p6YYk=
 github.com/tencentyun/tls-sig-api-v2-golang v1.3.0/go.mod h1:0L1MSijyEq6a74xZ02h0qKfN8y6RcvDiNabIZWXereE=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
